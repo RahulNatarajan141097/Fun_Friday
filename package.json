@@ -1,14 +1,14 @@
 {
   "name": "fun-friday",
   "version": "0.0.0",
-  "homepage": "https://<your-username>.github.io/<repository-name>",
+  "homepage": "https://RahulNatarajan141097.github.io/Fun_Friday",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "predeploy": "ng build --configuration production --base-href https://RahulNatarajan141097.github.io/Games/",
+    "predeploy": "ng build --configuration production --base-href https://RahulNatarajan141097.github.io/Fun_Friday/",
     "deploy": "gh-pages -d dist/fun-friday"
   },
   "private": true,
