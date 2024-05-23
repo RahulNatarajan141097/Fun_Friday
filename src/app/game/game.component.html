@@ -1,0 +1,52 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<app-modal #modalRef></app-modal>
+
+<div class="container">
+  <a routerLink="/rules" class="left" target="_blank"><h1 class="container">Rules</h1></a>
+  <div class="center"><h1 class="container">Fun Friday</h1></div>
+  <a routerLink="/score" class="right" target="_blank"><h1 class="container">Points Calculator</h1></a>
+</div>
+
+<div id="model-container" class="table-container margin">
+  <table class="my-table" style="width: 100%; height: 100%;">
+    <tr>
+      <td><h1 class="cell-button-first">Sports</h1></td>
+      <td><h1 class="cell-button-first">Tech</h1></td>
+      <td><h1 class="cell-button-first">General</h1></td>
+      <td><h1 class="cell-button-first">Celebrity</h1></td>
+    </tr> 
+    <tr>
+      <td><button (dblclick)="openModal(0,100)" class="cell-button">{{ FirstText_100 | async }}</button></td>
+      <td><button (dblclick)="openModal(1,100)" class="cell-button">{{ SecondText_100 | async }}</button></td>
+      <td><button (dblclick)="openModal(2,100)" class="cell-button">{{ ThiredText_100 | async  }}</button></td>
+      <td><button (dblclick)="openModal(3,100)" class="cell-button">{{ ForthText_100 | async  }}</button></td>      
+    </tr>
+    <tr>
+      <td><button (dblclick)="openModal(5,200)" class="cell-button">{{ FirstText_200 | async }}</button></td>
+      <td><button (dblclick)="openModal(6,200)" class="cell-button">{{ SecondText_200 | async }}</button></td>
+      <td><button (dblclick)="openModal(7,200)" class="cell-button">{{ ThiredText_200 | async }}</button></td>
+      <td><button (dblclick)="openModal(8,200)" class="cell-button">{{ ForthText_200 | async }}</button></td>      
+    </tr>
+    <tr>
+      <td><button (dblclick)="openModal(10,300)" class="cell-button">{{ FirstText_300 | async }}</button></td>
+      <td><button (dblclick)="openModal(11,300)" class="cell-button">{{ SecondText_300 | async }}</button></td>
+      <td><button (dblclick)="openModal(12,300)" class="cell-button">{{ ThiredText_300 | async }}</button></td>
+      <td><button (dblclick)="openModal(13,300)" class="cell-button">{{ ForthText_300 | async }}</button></td>      
+    </tr>
+    <tr>
+      <td><button (dblclick)="openModal(15,400)" class="cell-button">{{ FirstText_400 | async }}</button></td>
+      <td><button (dblclick)="openModal(16,400)" class="cell-button">{{ SecondText_400 | async }}</button></td>
+      <td><button (dblclick)="openModal(17,400)" class="cell-button">{{ ThiredText_400 | async }}</button></td>
+      <td><button (dblclick)="openModal(18,400)" class="cell-button">{{ ForthText_400 | async }}</button></td>      
+    </tr>
+    <tr>
+      <td><button (dblclick)="openModal(20,500)" class="cell-button">{{ FirstText_500 | async }}</button></td>
+      <td><button (dblclick)="openModal(21,500)" class="cell-button">{{ SecondText_500 | async }}</button></td>
+      <td><button (dblclick)="openModal(22,500)" class="cell-button">{{ ThiredText_500 | async }}</button></td>
+      <td><button (dblclick)="openModal(23,500)" class="cell-button">{{ ForthText_500 | async }}</button></td> 
+    </tr>
+  </table>
+</div>

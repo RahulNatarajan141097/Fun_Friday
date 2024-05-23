@@ -1,0 +1,56 @@
+.background {
+    background-color: #bdecb6;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow boxes to wrap */
+  }
+    
+  
+  /* Your existing box styles */
+  .box {
+    width: calc(50% - 40px); /* Adjust the width */
+    max-width: 3000px; /* Maximum width */
+    height: 45vh; /* Adjust the height */
+    margin: 20px; /* Adjust the margin */
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white; /* White background color for boxes */
+  }
+  
+  
+  .box img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .box-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+  
+  .box-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Montserrat', sans-serif; /* Apply Roboto font */
+  }
+  
+  

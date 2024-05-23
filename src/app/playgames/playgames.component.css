@@ -1,0 +1,56 @@
+.background {
+  background-color: #bdecb6;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow boxes to wrap */
+}
+
+.box {
+  width: calc(50% - 40px); /* Adjust the width */
+  max-width: 300px; /* Maximum width */
+  height: 45vh; /* Adjust the height */
+  margin: 20px; /* Adjust the margin */
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(190, 222, 255); /* White background color for boxes */
+}
+
+.box img {
+  max-width: 95%; /* Increase the image size to take up 95% of the box's width */
+  max-height: 85%; /* Increase the image height to 85% of the box's height */
+  object-fit: contain; /* Maintain aspect ratio without clipping */
+  margin: auto; /* Center the image */
+  display: block; /* Ensure block display for centering */
+}
+
+.box-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.box-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}

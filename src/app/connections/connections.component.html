@@ -1,0 +1,19 @@
+<div class="title-container">
+  <h1>{{ title[currentIndex] }}</h1>
+</div>
+
+
+<div class="image-container">
+  <img [src]="images[currentIndex]" alt="Image">
+</div>
+
+<div class="answer-container" *ngIf="answerVisible">
+  <h1>{{ answers[currentIndex] }}</h1>
+</div>
+
+<div class="button-container">
+  <button [disabled]="isBackDisabled()" (click)="goBack()">Back</button>
+  <button (click)="revealAnswer()">Reveal Answer</button>
+  <button (click)="goNext()">Next</button>
+  <button *ngIf="isConfigureGame" (click)="edit()">Edit</button>
+</div>

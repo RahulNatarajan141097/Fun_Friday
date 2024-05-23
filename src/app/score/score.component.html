@@ -1,0 +1,42 @@
+<body>
+  <div>
+    <h1>Points</h1>
+  </div>
+
+  <div>
+    <div>
+      <h2 class="oneline">Team 1 Total Score = {{resultteam1}} </h2>
+      <input type="number" id="input1" [(ngModel)]="input1">
+    </div>
+    <div>
+      <h2 class="oneline">Team 2 Total Score = {{resultteam2}} </h2>
+      <input type="number" id="input2" [(ngModel)]="input2">
+    </div>
+    <div>
+      <h2 class="oneline">Team 3 Total Score = {{resultteam3}} </h2>
+      <input type="number" id="input3" [(ngModel)]="input3">
+    </div>
+    <div>
+      <h2 class="oneline">Team 4 Total Score = {{resultteam4}} </h2>
+      <input type="number" id="input4" [(ngModel)]="input4">
+    </div>
+  </div>
+
+  <div class="butttoncenter">
+    <button class="btn btn-success"
+            (click)="calculate(input1, input2, input3, input4);
+          input1=''"
+            (click)="input2='';"
+            (click)="input3='';"
+            (click)="input4='';">
+      <h3>Calculate</h3>
+    </button>
+    <div class="undo">
+      <button class="btn btn-success" (click)="undo()">
+        <h3>Undo</h3>
+      </button>
+    </div>
+  </div>
+
+</body>
+

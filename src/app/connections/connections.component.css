@@ -1,0 +1,95 @@
+/* Title styling */
+.title-container {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.title-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #161718; /* Blue color */
+}
+
+
+/* Center the image container */
+.image-container {
+  text-align: center;
+  margin-bottom: 10px;
+  height: 65%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #98FB98;
+  border-radius: 10px;
+  border: 2px solid #007BFF; /* Blue border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
+              0 4px 8px rgba(0, 0, 0, 0.1), 
+              inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow */
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Style the image */
+.image-container img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain; 
+}
+
+/* Button container styling */
+.button-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Fixed position at the bottom */
+  bottom: 20px;
+  width: 100%;
+}
+
+/* Button styling */
+.button-container button {
+  background-color: #007BFF; /* Blue */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 20px; /* Add space between buttons */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.button-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Disabled button styling */
+.button-container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Answer container styling */
+.answer-container {
+  text-align: center;
+  margin: 0px 20px 20px 20px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 36px;
+  color: #007BFF;
+  background-color: #98FB98;
+  border-radius: 10px;
+  border: 2px solid #007BFF; /* Blue border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
+              0 4px 8px rgba(0, 0, 0, 0.1), 
+              inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+.answer-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}

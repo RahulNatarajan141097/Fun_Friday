@@ -1,0 +1,64 @@
+.centerimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centertext {
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer {
+  font-size: 44px;
+  text-align: right;
+}
+
+.guess {
+  text-align: left;
+  font-size: 44px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.buttons {
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timer {
+  color: black;
+}
+
+  .timer.red {
+    color: red;
+  }
+
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+

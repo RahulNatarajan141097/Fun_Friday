@@ -1,0 +1,79 @@
+/* Set a background color and font family */
+body {
+  margin: 0;
+  background-color: #ADD8E6;
+}
+
+/* Center the headings and give them a fun font */
+h1, h2, h3 {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-weight: bold;
+}
+
+div {
+  text-align: center;
+}
+
+input[type=number] {
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  background-color: #00BFFF;
+}
+
+/* Add some color to the button and center it */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.butttoncenter {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.oneline {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 102px;
+}
+
+/* Add some icons to the headings */
+h2:before {
+  content: "\f0e6";
+  font-family: FontAwesome;
+  margin-right: 10px;
+}
+
+/* Add a box shadow to the input fields */
+input[type=number] {
+  box-shadow: 2px 2px 5px #888888;
+}
+
+/* Make the input fields and button responsive */
+@media (max-width: 600px) {
+  input[type=number], button {
+    width: 100%;
+  }
+}
+
+.undo {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+/* Remove the arrows from the number input */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
