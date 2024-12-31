@@ -6,96 +6,98 @@ import { SharedServicesComponent } from '../shared-services/shared-services.comp
   templateUrl: './connections.component.html',
   styleUrls: ['./connections.component.css']
 })
-export class ConnectionsComponent implements OnInit {
 
+export class ConnectionsComponent implements OnInit {
 
   currentIndex: number = 0;
   isConfigureGame: boolean = false;
   imagePath: string = '';
+  currentAudio: HTMLAudioElement | null = null;
 
   constructor(private sharedServicesComponent: SharedServicesComponent) {
     this.isConfigureGame = this.sharedServicesComponent.isConfigureGame;
   }  
+
   title: string[] = [
-    'Technology',
-    'Technology',
-    'Technology',
-    'Entertainment',
-    'Entertainment',
-    'Entertainment',
-    'Sports',
-    'Sports',
-    'Sports',
-    'Technology',
-    'Technology',
-    'Technology',
-    'Entertainment',
-    'Entertainment',
-    'Entertainment',
-    'Sports',
-    'Sports',
-    'Sports',
-    'Technology',
-    'Technology',
-    'Technology',
-    'Entertainment',
-    'Entertainment',
-    'Entertainment',
-    'Sports',
-    'Sports',
-    'Sports'
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Movie Name',
+    'Tamil Dialogue',
+    'Tamil Dialogue',
+    'Tamil Dialogue',
+    'Tamil Dialogue',
+    'Tamil Dialogue',
+    'Tamil Dialogue',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song',
+    'Guess the song'
   ];
 
   images: string[] = [
-    'assets/Tech 1.jpg',
-    'assets/Tech 2.jpg',
-    'assets/Tech 3.gif',
-    'assets/Enter 1.jpg',
-    'assets/Enter 2.jpg',
-    'assets/Enter 3.jpg',
-    'assets/Sport 1.jpg',
-    'assets/Sport 2.jpg',
-    'assets/Sport 3.jpg',
-    'assets/Tech 4.jpg',
-    'assets/Tech 5.jpg',
-    'assets/Tech 6.jpg',
-    'assets/Enter 4.jpg',
-    'assets/Enter 5.jpg',
-    'assets/Enter 6.jpg',
-    'assets/Sport 4.jpg',
-    'assets/Sport 5.jpg',
-    'assets/Sport 6.jpg',
-    'assets/Tech 7.jpg',
-    'assets/Tech 8.jpg',
-    'assets/Tech 9.jpg',
-    'assets/Enter 7.jpg',
-    'assets/Enter 8.jpg',
-    'assets/Enter 9.jpg',
-    'assets/Sport 7.jpeg',
-    'assets/Sport 8.jpg',
-    'assets/Sport 9.jpg'
+    'assets/image 1.png',
+    'assets/image 2.jpg',
+    'assets/image 3.png',
+    'assets/image 4.png',
+    'assets/image 5.png',
+    'assets/image 6.png',
+    'assets/image 7.png',
+    'assets/image 8.png',
+    'assets/image 9.png',
+    'assets/image 10.png',
+    'assets/image 11.jpg',
+    'assets/image 12.png',
+    'assets/image 13.png',
+    'assets/image 14.png',
+    'assets/image 15.png',
+    'assets/image 16.png',
+    'assets/image 17.png',
+    'assets/image 18.jpg',
+    'assets/image 19.png',
+    'assets/image 20.png',
+    'assets/image 21.png',
+    'assets/image 22.png',
+    'assets/image 23.jpg',
+    'assets/image 24.jpg',
+    'assets/image 25.jpng',
+    'assets/image 26.png',
+    'assets/image 27.png'
   ];
 
   answers: string[] = [
-    'Backspace',
-    'Laptop',
-    'Array',
-    'Pirates of the Caribbean',
-    'Manjummel Boys',
-    'Conjuring',
-    'Socker',
-    'Hokey',
-    'Golf',
-    'Artificial Intelligence',
-    'Internet Of Things',
-    'Full Stack Developer',
-    'Un samayal arayil naan uppa',
-    'Big Boss',
-    'Ishwariyaray',
-    'Frisbee',
-    'Rugby',
-    'Cricket',
-    'Penetration Testing ',
+    'தர்ம துரை',
+    'காப்பான்',
+    'வேட்டையாடு விளையாடு',
+    'பொன்னியின் செல்வன்',
+    'சீதா ராமம்',
+    'பைரவா',
+    'அழகிய தமிழ் மகன்',
+    'ஜவான்',
+    'காதலுக்கு மரியாதை',
+    'திருச்சிற்றம்பலம் ',
+    'அசுரன்',
+    'விக்ரம் வேதா',
+    'மண்டை மேல இருக்குற கொண்டையை மறந்துட்டேன்',
+    'ஏய் ஆதிவாசி அடக்கி வாசி',
+    'வாழ்க்கை ஒரு வட்டம்',
+    'அமுல் பேபி ராகுவரான வில்லனா தான பாத்துருக்க',
+    'சங்கு ஊதுற வயசுல சங்கீதா',
+    'அது போன மாசம் இது இந்த மாசம்',
+    'Ovvoru Pookalume',
     'Web Server',
     'Deep Learning',
     'Titanic',
@@ -106,23 +108,103 @@ export class ConnectionsComponent implements OnInit {
     'Usain Bolt',
   ];
 
+  answeraudioFiles: string[] = [
+    'assets/answeraudio1.mp3',
+    'assets/answeraudio2.mp3',
+    'assets/answeraudio3.mp3',
+    'assets/answeraudio4.mp3',
+    'assets/answeraudio5.mp3',
+    'assets/answeraudio6.mp3',
+    'assets/answeraudio7.mp3',
+    'assets/answeraudio8.mp3',
+    'assets/answeraudio9.mp3',
+    'assets/answeraudio10.mp3',
+    'assets/answeraudio11.mp3',
+    'assets/answeraudio12.mp3',
+    'assets/answeraudio13.mp4',
+    'assets/answeraudio14.mp4',
+    'assets/answeraudio15.mp4',
+    'assets/answeraudio16.mp4',
+    'assets/answeraudio17.mp4',
+    'assets/answeraudio18.mp4',
+    'assets/answeraudio19.mp3',
+    'assets/answeraudio20.mp3',
+    'assets/answeraudio21.mp3',
+    'assets/answeraudio22.mp3',
+    'assets/answeraudio23.mp3',
+    'assets/answeraudio24.mp3',
+    'assets/answeraudio25.mp3',
+    'assets/answeraudio26.mp3',
+    'assets/answeraudio27.mp3'
+  ];
+
+  questionaudioFiles: string[] = [
+    'assets/questionaudio1.mpeg',
+    'assets/questionaudio2.mpeg',
+    'assets/questionaudio3.mpeg',
+    'assets/questionaudio4.mpeg',
+    'assets/questionaudio5.mpeg',
+    'assets/questionaudio6.mpeg',
+    'assets/questionaudio7.mpeg',
+    'assets/questionaudio8.mpeg',
+    'assets/questionaudio9.mpeg',
+    'assets/questionaudio10.mpeg',
+    'assets/questionaudio11.mpeg',
+    'assets/questionaudio12.mpeg',
+    'assets/questionaudio13.mpeg',
+    'assets/questionaudio14.mpeg',
+    'assets/questionaudio15.mpeg',
+    'assets/questionaudio16.mpeg',
+    'assets/questionaudio17.mpeg',
+    'assets/questionaudio18.mpeg',
+    'assets/questionaudio19.mpeg',
+    'assets/questionaudio20.mpeg',
+    'assets/questionaudio21.mpeg',
+    'assets/questionaudio22.mpeg',
+    'assets/questionaudio23.mpeg',
+    'assets/questionaudio24.mpeg',
+    'assets/questionaudio25.mpeg',
+    'assets/questionaudio26.mpeg',
+    'assets/questionaudio27.mpeg'
+  ];
+
   answerVisible: boolean = false;
 
   ngOnInit(): void {
   }
 
   goBack() {
-    this.currentIndex = (this.currentIndex - 1) % this.images.length;
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     this.answerVisible = false; 
+    if (this.currentAudio) {
+      this.currentAudio.pause();
+      this.currentAudio.currentTime = 0;
+    }
   }
 
   goNext() {
+    if (this.currentAudio) {
+        this.currentAudio.pause();
+        this.currentAudio.currentTime = 0;
+    }
+
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    this.answerVisible = false; 
+    this.answerVisible = false;
+
+    this.currentAudio = new Audio(this.questionaudioFiles[this.currentIndex]);
+    this.currentAudio.play();
   }
 
   revealAnswer() {
     this.answerVisible = !this.answerVisible;
+    if (this.answerVisible) {
+      if (this.currentAudio) {
+          this.currentAudio.pause();
+          this.currentAudio.currentTime = 0;
+      }
+      this.currentAudio = new Audio(this.answeraudioFiles[this.currentIndex]);
+      this.currentAudio.play();
+    }
   }
 
   isBackDisabled(): boolean {
@@ -138,6 +220,6 @@ export class ConnectionsComponent implements OnInit {
   }
 
   edit(){
-    
+    // Implement edit functionality here
   }
 }
