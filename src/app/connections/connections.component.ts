@@ -98,11 +98,11 @@ export class ConnectionsComponent implements OnInit {
     'சங்கு ஊதுற வயசுல சங்கீதா',
     'அது போன மாசம் இது இந்த மாசம்',
     'Ovvoru Pookalume',
-    'Web Server',
-    'Deep Learning',
-    'Titanic',
-    'Balakrishna',
-    'KGF',
+    'Un Samayal Arayil',
+    'Nenjukkul Peidhidum',
+    'Unnai Paartha Pinbu Naan',
+    'June Ponal',
+    'Suthudhe Suthudhe',
     'Dhoni',
     'Messi',
     'Usain Bolt',
@@ -127,15 +127,15 @@ export class ConnectionsComponent implements OnInit {
     'assets/answeraudio16.mp4',
     'assets/answeraudio17.mp4',
     'assets/answeraudio18.mp4',
-    'assets/answeraudio19.mp3',
-    'assets/answeraudio20.mp3',
-    'assets/answeraudio21.mp3',
-    'assets/answeraudio22.mp3',
-    'assets/answeraudio23.mp3',
-    'assets/answeraudio24.mp3',
-    'assets/answeraudio25.mp3',
-    'assets/answeraudio26.mp3',
-    'assets/answeraudio27.mp3'
+    'assets/answeraudio19.mp4',
+    'assets/answeraudio20.mp4',
+    'assets/answeraudio21.mp4',
+    'assets/answeraudio22.mp4',
+    'assets/answeraudio23.mp4',
+    'assets/answeraudio24.mp4',
+    'assets/answeraudio25.mp4',
+    'assets/answeraudio26.mp4',
+    'assets/answeraudio27.mp4'
   ];
 
   questionaudioFiles: string[] = [
@@ -174,12 +174,16 @@ export class ConnectionsComponent implements OnInit {
   }
 
   goBack() {
-    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
-    this.answerVisible = false; 
     if (this.currentAudio) {
-      this.currentAudio.pause();
-      this.currentAudio.currentTime = 0;
+        this.currentAudio.pause();
+        this.currentAudio.currentTime = 0;
     }
+
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+    this.answerVisible = false;
+
+    this.currentAudio = new Audio(this.questionaudioFiles[this.currentIndex]);
+    this.currentAudio.play();
   }
 
   goNext() {
