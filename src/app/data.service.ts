@@ -13,13 +13,7 @@ export class DataService {
 
   constructor() { }
 
-  public FirstText_100: BehaviorSubject<string>[] = [
-    new BehaviorSubject<string>('100'), new BehaviorSubject<string>('100'), new BehaviorSubject<string>('100'), new BehaviorSubject<string>('100'), new BehaviorSubject<string>('100'),
-    new BehaviorSubject<string>('200'), new BehaviorSubject<string>('200'), new BehaviorSubject<string>('200'), new BehaviorSubject<string>('200'), new BehaviorSubject<string>('200'),
-    new BehaviorSubject<string>('300'), new BehaviorSubject<string>('300'), new BehaviorSubject<string>('300'), new BehaviorSubject<string>('300'), new BehaviorSubject<string>('300'),
-    new BehaviorSubject<string>('400'), new BehaviorSubject<string>('400'), new BehaviorSubject<string>('400'), new BehaviorSubject<string>('400'), new BehaviorSubject<string>('400'),
-    new BehaviorSubject<string>('500'), new BehaviorSubject<string>('500'), new BehaviorSubject<string>('500'), new BehaviorSubject<string>('500'), new BehaviorSubject<string>('500')
-  ];
+  public FirstText_100: BehaviorSubject<string>[] = Array.from({ length: 36 }, (_, i) => new BehaviorSubject<string>((i + 1).toString()));
 
   setFirstText_100(index: number) {
     if (this.FirstText_100[index]) {

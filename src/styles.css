@@ -5,6 +5,7 @@
   --row-color-4: #4682B4;
   --row-color-5: #1E90FF;
   --row-color-6: #1c758a;
+  --row-color-7: #104e70;
 }
 
 .my-table tr:nth-child(1) {
@@ -29,4 +30,8 @@
 
 .my-table tr:nth-child(6) {
   background-color: var(--row-color-6);
+}
+
+.my-table tr:nth-child(7) {
+  background-color: var(--row-color-7);
 }

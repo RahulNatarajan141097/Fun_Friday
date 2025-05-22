@@ -32,15 +32,8 @@ export class ModalComponent implements OnInit {
       modelDiv.style.display = 'block';
       this.modalBody = a;
       // Start the timer
-      if (score == 100 || score == 200) {
-        this.timeRemaining = 60; // Set the initial time remaining to 60 seconds
-      }
-      else if (score == 300) {
-        this.timeRemaining = 120; // Set the initial time remaining to 120 seconds
-      }
-      else {
-        this.timeRemaining = 180; // Set the initial time remaining to 180 seconds
-      }
+      this.timeRemaining = 45; // Set the initial time remaining to 45 seconds
+      
       const timerDiv = document.querySelector(".timer");
       if (timerDiv != null) {
         timerDiv.innerHTML = this.getTimeRemaining();
@@ -51,8 +44,8 @@ export class ModalComponent implements OnInit {
         if (this.timeRemaining < 0) {
           // Time's up!
           clearInterval(this.timerInterval);
-        } else if (this.timeRemaining < 30) {
-          // Timer has reached 30 seconds, change color and add class
+        } else if (this.timeRemaining < 10) {
+          // Timer has reached 10 seconds, change color and add class
           const timerDiv = document.querySelector(".timer");
           if (timerDiv != null) {
             timerDiv.innerHTML = this.getTimeRemaining();
@@ -63,7 +56,7 @@ export class ModalComponent implements OnInit {
             this.audio = false;
           }
         } else {
-          // Timer still has more than 30 seconds remaining, update timer element
+          // Timer still has more than 10 seconds remaining, update timer element
           const timerDiv = document.querySelector(".timer");
           if (timerDiv != null) {
             timerDiv.innerHTML = this.getTimeRemaining();
